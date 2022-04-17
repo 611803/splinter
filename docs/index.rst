@@ -19,7 +19,7 @@ Sample code
 
 ::
 
-    from splinter import Browser
+    from cksplinter import Browser
 
     with Browser() as browser:
         # Visit URL.

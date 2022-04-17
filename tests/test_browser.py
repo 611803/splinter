@@ -8,7 +8,7 @@
 import builtins
 from importlib import reload
 
-from splinter.exceptions import DriverNotFoundError
+from cksplinter.exceptions import DriverNotFoundError
 
 from selenium.common.exceptions import WebDriverException
 
@@ -34,12 +34,12 @@ def unpatch_driver(module, old_import):
 
 
 def test_browser_can_still_be_imported_from_splinters_browser_module():
-    from splinter.browser import Browser  # NOQA
+    from cksplinter.browser import Browser  # NOQA
 
 
 def test_browser_should_work_even_without_zope_testbrowser():
     old_import = patch_driver("zope")
-    from splinter import browser
+    from cksplinter import browser
 
     reload(browser)
     assert None is browser._DRIVERS['zope.testbrowser']
@@ -49,7 +49,7 @@ def test_browser_should_work_even_without_zope_testbrowser():
 
 def test_browser_should_raise_an_exception_when_driver_is_not_found():
     with pytest.raises(DriverNotFoundError):
-        from splinter import Browser
+        from cksplinter import Browser
 
         Browser("unknown-driver")
 
@@ -57,7 +57,7 @@ def test_browser_should_raise_an_exception_when_driver_is_not_found():
 @pytest.mark.parametrize('browser_name', ['chrome', 'firefox'])
 def test_browser_local_driver_not_present(browser_name):
     """When chromedriver/geckodriver are not present on the system."""
-    from splinter import Browser
+    from cksplinter import Browser
 
     with pytest.raises(WebDriverException) as e:
         Browser(browser_name, executable_path='failpath')
@@ -67,8 +67,8 @@ def test_browser_local_driver_not_present(browser_name):
 
 def test_browser_driver_retry_count():
     """Checks that the retry count is being used"""
-    from splinter.browser import _DRIVERS
-    from splinter import Browser
+    from cksplinter.browser import _DRIVERS
+    from cksplinter import Browser
     global test_retry_count
 
     def test_driver(*args, **kwargs):
@@ -96,7 +96,7 @@ def test_browser_log_missing_drivers(caplog):
     import logging
     caplog.set_level(logging.DEBUG)
     old_import = patch_driver("flask")
-    from splinter import browser
+    from cksplinter import browser
 
     reload(browser)
     unpatch_driver(browser, old_import)

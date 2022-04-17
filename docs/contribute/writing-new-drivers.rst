@@ -19,7 +19,7 @@ Imagine you're creating the ``Columbia`` driver, you would add the ``test_columb
 
 ::
 
-    from splinter import Browser
+    from cksplinter import Browser
     from tests.base import BaseBrowserTests
 
     class ColumbiaTest(BaseBrowserTests):

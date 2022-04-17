@@ -17,7 +17,7 @@ With Splinter's type() method, you can use Selenium's Keys implementation.
 ::
 
     from selenium.webdriver.common.keys import Keys
-    from splinter import Browser
+    from cksplinter import Browser
 
 
     browser = Browser()

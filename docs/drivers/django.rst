@@ -36,7 +36,7 @@ the ``Browser`` instance:
 
 .. code-block:: python
 
-    from splinter import Browser
+    from cksplinter import Browser
     browser = Browser('django')
 
 **Note:** if you don't provide any driver to ``Browser`` function, ``firefox`` will be used.

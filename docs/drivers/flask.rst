@@ -36,7 +36,7 @@ To use the ``flask`` driver, you'll need to pass the string ``flask`` and an app
 
 .. code-block:: python
 
-    from splinter import Browser
+    from cksplinter import Browser
     browser = Browser('flask', app=app)
 
 **Note:** if you don't provide any driver to ``Browser`` function, ``firefox`` will be used.

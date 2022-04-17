@@ -25,12 +25,13 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC  # NOQA: N812
 from selenium.webdriver.support.ui import WebDriverWait
 
-from splinter.driver import DriverAPI, ElementAPI
-from splinter.driver.find_links import FindLinks
-from splinter.driver.xpath_utils import _concat_xpath_from_str
-from splinter.element_list import ElementList
-from splinter.driver.webdriver.cookie_manager import CookieManager
-from splinter.exceptions import ElementDoesNotExist
+from cksplinter.driver.webdriver.cookie_manager import CookieManager
+from cksplinter.driver import DriverAPI, ElementAPI
+from cksplinter.driver.find_links import FindLinks
+from cksplinter.driver.xpath_utils import _concat_xpath_from_str
+from cksplinter.element_list import ElementList
+
+from cksplinter.exceptions import ElementDoesNotExist
 
 
 # Patch contextmanager onto Selenium's Alert
@@ -960,7 +961,7 @@ class WebDriverElement(ElementAPI):
         height = self.driver.execute_script("return Math.max(document.body.scrollHeight, document.body.offsetHeight);")
         self.driver.set_window_size(width, height)
 
-    def screenshot(self, name='', suffix='.png', full=False, unique_file=True):
+    def screenshot(self, name='', suffix='.png', full=False, unique_file=True, deviationX=0, deviationY=0):
 
         filename = '{}{}'.format(name, suffix)
 

@@ -13,7 +13,7 @@ It creates an event by going to http://www.facebook.com, login and navigate to "
 import os
 import unittest
 import time
-from splinter import Browser
+from cksplinter import Browser
 
 
 class FacebookEventsTestCase(unittest.TestCase):

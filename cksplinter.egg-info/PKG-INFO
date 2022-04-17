@@ -1,3 +1,31 @@
+Metadata-Version: 2.1
+Name: cksplinter
+Version: 0.17.4
+Summary: browser abstraction for web acceptance testing
+Home-page: https://github.com/611803/splinter
+Author: CobraTeam
+Author-email: andrewsmedina@gmail.com
+License: BSD
+Project-URL: Documentation, https://splinter.readthedocs.io/
+Project-URL: Changelog, https://github.com/611803/splinter/tree/master/docs/news
+Project-URL: Source, https://github.com/cobrateam/splinter/
+Project-URL: Tracker, https://github.com/cobrateam/splinter/issues
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Provides-Extra: zope.testbrowser
+Provides-Extra: django
+Provides-Extra: flask
+Provides-Extra: edge
+Provides-Extra: selenium3
+Provides-Extra: selenium4
+License-File: LICENSE
+License-File: AUTHORS
+
 .. image:: https://img.shields.io/pypi/v/splinter.svg
     :target: https://pypi.org/project/splinter
     :alt: PyPI
@@ -95,3 +123,5 @@ Presentations & Tutorials
 * `Django Full Stack Testing and BDD with Lettuce and Splinter <https://www.cilliano.com/2011/02/07/django-bdd-with-lettuce-and-splinter.html>`_
 
 * `Testes de aceitação com Lettuce e Splinter (pt-br) <http://www.slideshare.net/franciscosouza/testes-de-aceitao-com-lettuce-e-splinter?from=ss_embed>`_
+
+

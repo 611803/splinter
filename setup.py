@@ -17,7 +17,7 @@ def read(filename: str) -> str:
 def get_version_data() -> dict:
     data = {}
 
-    path = os.path.join(os.path.dirname(__file__), 'splinter', 'version.py')
+    path = os.path.join(os.path.dirname(__file__), 'cksplinter', 'version.py')
 
     with open(path) as fp:
         exec(fp.read(), data)
@@ -29,9 +29,9 @@ version_data = get_version_data()
 
 
 setup(
-    name="splinter",
-    version=version_data['__version__'],
-    url="https://github.com/cobrateam/splinter",
+    name="cksplinter",
+    version="0.17.4",
+    url="https://github.com/611803/splinter",
     description="browser abstraction for web acceptance testing",
     long_description=read('README.rst'),
     author="CobraTeam",
@@ -44,7 +44,7 @@ setup(
     + [("Programming Language :: Python :: %s" % x) for x in "3.7 3.8 3.9 3.10".split()],
     project_urls={
         "Documentation": "https://splinter.readthedocs.io/",
-        "Changelog": "https://github.com/cobrateam/splinter/tree/master/docs/news",
+        "Changelog": "https://github.com/611803/splinter/tree/master/docs/news",
         "Source": "https://github.com/cobrateam/splinter/",
         "Tracker": "https://github.com/cobrateam/splinter/issues",
     },

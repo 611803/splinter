@@ -12,12 +12,12 @@ from urllib import parse
 import lxml.etree
 import lxml.html
 from lxml.cssselect import CSSSelector
-from splinter.driver import DriverAPI, ElementAPI
-from splinter.driver.find_links import FindLinks
-from splinter.driver.element_present import ElementPresentMixIn
-from splinter.driver.xpath_utils import _concat_xpath_from_str
-from splinter.element_list import ElementList
-from splinter.exceptions import ElementDoesNotExist
+from cksplinter.driver import DriverAPI, ElementAPI
+from cksplinter.driver.find_links import FindLinks
+from cksplinter.driver.element_present import ElementPresentMixIn
+from cksplinter.driver.xpath_utils import _concat_xpath_from_str
+from cksplinter.element_list import ElementList
+from cksplinter.exceptions import ElementDoesNotExist
 
 
 class LxmlDriver(ElementPresentMixIn, DriverAPI):

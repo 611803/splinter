@@ -13,7 +13,10 @@ from urllib3.exceptions import MaxRetryError
 
 from selenium.common.exceptions import WebDriverException
 
-from splinter.exceptions import DriverNotFoundError
+from cksplinter.driver.webdriver.firefox import WebDriver as FirefoxWebDriver
+from cksplinter.driver.webdriver.remote import WebDriver as RemoteWebDriver
+from cksplinter.driver.webdriver.chrome import WebDriver as ChromeWebDriver
+from cksplinter.exceptions import DriverNotFoundError
 
 
 _DRIVERS = {
@@ -27,9 +30,9 @@ _DRIVERS = {
 }
 
 try:
-    from splinter.driver.webdriver.chrome import WebDriver as ChromeWebDriver
-    from splinter.driver.webdriver.firefox import WebDriver as FirefoxWebDriver
-    from splinter.driver.webdriver.remote import WebDriver as RemoteWebDriver
+    from cksplinter.driver.webdriver.chrome import WebDriver as ChromeWebDriver
+    from cksplinter.driver.webdriver.firefox import WebDriver as FirefoxWebDriver
+    from cksplinter.driver.webdriver.remote import WebDriver as RemoteWebDriver
 
     _DRIVERS['chrome'] = ChromeWebDriver
     _DRIVERS['firefox'] = FirefoxWebDriver
@@ -39,7 +42,7 @@ except ImportError as e:
 
 
 try:
-    from splinter.driver.webdriver.edge import WebDriver as EdgeWebDriver
+    from cksplinter.driver.webdriver.edge import WebDriver as EdgeWebDriver
 
     _DRIVERS["edge"] = EdgeWebDriver
 except ImportError as e:
@@ -47,7 +50,7 @@ except ImportError as e:
 
 
 try:
-    from splinter.driver.zopetestbrowser import ZopeTestBrowser
+    from cksplinter.driver.zopetestbrowser import ZopeTestBrowser
 
     _DRIVERS["zope.testbrowser"] = ZopeTestBrowser
 except ImportError as e:
@@ -55,7 +58,7 @@ except ImportError as e:
 
 try:
     import django  # noqa
-    from splinter.driver.djangoclient import DjangoClient
+    from cksplinter.driver.djangoclient import DjangoClient
 
     _DRIVERS["django"] = DjangoClient
 except ImportError as e:
@@ -63,7 +66,7 @@ except ImportError as e:
 
 try:
     import flask  # noqa
-    from splinter.driver.flaskclient import FlaskClient
+    from cksplinter.driver.flaskclient import FlaskClient
 
     _DRIVERS["flask"] = FlaskClient
 except ImportError as e:

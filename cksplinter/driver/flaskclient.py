@@ -7,8 +7,8 @@
 
 from urllib.parse import parse_qs, urlparse, urlencode, urlunparse
 
-from splinter.cookie_manager import CookieManagerAPI
-from splinter.request_handler.status_code import StatusCode
+from cksplinter.cookie_manager import CookieManagerAPI
+from cksplinter.request_handler.status_code import StatusCode
 
 from .lxmldriver import LxmlDriver
 

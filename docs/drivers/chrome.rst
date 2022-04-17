@@ -91,7 +91,7 @@ the ``Browser`` instance:
 
 .. code-block:: python
 
-    from splinter import Browser
+    from cksplinter import Browser
     browser = Browser('chrome')
 
 **Note:** if you don't provide any driver to the ``Browser`` function, ``firefox`` will be used.
@@ -109,7 +109,7 @@ when creating a new Browser instance.
 
 .. code-block:: python
 
-    from splinter import Browser
+    from cksplinter import Browser
     browser = Browser('chrome', headless=True)
 
 Incognito mode
@@ -120,7 +120,7 @@ when creating a Browser instance.
 
 .. code-block:: python
 
-    from splinter import Browser
+    from cksplinter import Browser
     browser = Browser('chrome', incognito=True)
 
 Emulation mode
@@ -134,7 +134,7 @@ Further Information: `chrome driver documentation <https://sites.google.com/a/ch
 .. code-block:: python
 
     from selenium import webdriver
-    from splinter import Browser
+    from cksplinter import Browser
 
     mobile_emulation = {"deviceName": "Google Nexus 5"}
     chrome_options = webdriver.ChromeOptions()
@@ -153,7 +153,7 @@ the value set to the path to the executable file.
 
 .. code-block:: python
 
-    from splinter import Browser
+    from cksplinter import Browser
     executable_path = {'executable_path':'</path/to/chrome>'}
 
     browser = Browser('chrome', **executable_path)

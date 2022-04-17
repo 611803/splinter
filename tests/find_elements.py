@@ -4,8 +4,8 @@
 # Use of this source code is governed by a BSD-style
 # license that can be found in the LICENSE file.
 
-from splinter.driver import ElementAPI
-from splinter.element_list import ElementList
+from cksplinter.driver import ElementAPI
+from cksplinter.element_list import ElementList
 
 
 class FindElementsTest:

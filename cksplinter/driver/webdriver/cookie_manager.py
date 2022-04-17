@@ -5,7 +5,7 @@
 # license that can be found in the LICENSE file.
 import sys
 
-from splinter.cookie_manager import CookieManagerAPI
+from cksplinter.cookie_manager import CookieManagerAPI
 
 if sys.version_info[0] > 2:
     from urllib.parse import urlparse

@@ -12,8 +12,8 @@ import unittest
 import pytest
 
 import django
-from splinter import Browser
 from .base import BaseBrowserTests, get_browser
+from cksplinter import Browser
 from .fake_webapp import EXAMPLE_APP
 
 

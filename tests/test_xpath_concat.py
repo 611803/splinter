@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from splinter.driver.xpath_utils import _concat_xpath_from_str
+from cksplinter.driver.xpath_utils import _concat_xpath_from_str
 
 
 WRAPPED_SINGLE_QUOTE = '\"\'\"'

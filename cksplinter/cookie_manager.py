@@ -4,7 +4,7 @@
 # Use of this source code is governed by a BSD-style
 # license that can be found in the LICENSE file.
 
-from splinter.meta import InheritedDocs
+from cksplinter.meta import InheritedDocs
 
 
 class CookieManagerAPI(InheritedDocs("_CookieManagerAPI", (object,), {})):

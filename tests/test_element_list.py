@@ -6,8 +6,8 @@
 
 import pytest
 
-from splinter.element_list import ElementList
-from splinter.exceptions import ElementDoesNotExist
+from cksplinter.element_list import ElementList
+from cksplinter.exceptions import ElementDoesNotExist
 
 
 class Person:

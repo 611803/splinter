@@ -8,7 +8,7 @@
 from urllib.request import urlopen
 import unittest
 
-from splinter import Browser
+from cksplinter import Browser
 from .fake_webapp import EXAMPLE_APP
 from .base import WebDriverTests
 
@@ -17,7 +17,7 @@ import pytest
 
 def selenium_server_is_running():
     try:
-        from splinter.driver.webdriver.remote import WebDriver
+        from cksplinter.driver.webdriver.remote import WebDriver
 
         page_contents = urlopen(WebDriver.DEFAULT_URL).read()
     except IOError:

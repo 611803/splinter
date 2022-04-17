@@ -2,7 +2,7 @@ from .fake_webapp import EXAMPLE_APP
 
 import pytest
 
-from splinter.driver.webdriver import ShadowRootElement
+from cksplinter.driver.webdriver import ShadowRootElement
 
 
 supported_browsers = ['chrome', 'chrome_fullscreen']

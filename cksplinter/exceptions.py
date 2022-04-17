@@ -11,7 +11,7 @@ class DriverNotFoundError(Exception):
 
     Example:
 
-        >>> from splinter import Browser
+        >>> from cksplinter import Browser
         >>> b = Browser('unknown driver') # raises DriverNotFoundError
     """
 

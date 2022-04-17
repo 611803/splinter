@@ -6,7 +6,11 @@
 
 from selenium.webdriver import Firefox
 from selenium.webdriver.firefox.firefox_profile import FirefoxProfile
-from splinter.driver.webdriver import BaseWebDriver
+from cksplinter.driver.webdriver import (
+    BaseWebDriver,
+    WebDriverElement as WebDriverElement,
+)
+from cksplinter.driver.webdriver.cookie_manager import CookieManager
 from selenium.webdriver.firefox.options import Options
 
 

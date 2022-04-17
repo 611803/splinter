@@ -8,7 +8,7 @@
 This module contains the basic API for splinter drivers and elements.
 """
 
-from splinter.meta import InheritedDocs
+from cksplinter.meta import InheritedDocs
 
 
 class DriverAPI(InheritedDocs("_DriverAPI", (object,), {})):

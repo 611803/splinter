@@ -6,7 +6,7 @@
 
 import unittest
 
-from splinter.request_handler.status_code import StatusCode
+from cksplinter.request_handler.status_code import StatusCode
 
 
 class RequestHandlerTestCase(unittest.TestCase):

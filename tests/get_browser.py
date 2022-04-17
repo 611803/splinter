@@ -3,7 +3,7 @@ from urllib import parse
 
 from selenium import webdriver
 
-from splinter import Browser
+from cksplinter import Browser
 
 from .fake_webapp import app, EXAMPLE_APP
 

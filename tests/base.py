@@ -9,6 +9,7 @@ import time
 import pytest
 
 from selenium.common.exceptions import WebDriverException
+from cksplinter import Browser
 
 from .click_elements import ClickElementsTest
 from .cookies import CookiesTest

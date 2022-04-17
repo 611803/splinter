@@ -9,7 +9,7 @@ import unittest
 
 import pytest
 
-from splinter import Browser
+from cksplinter import Browser
 from .base import BaseBrowserTests
 from .fake_webapp import EXAMPLE_APP
 

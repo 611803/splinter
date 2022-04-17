@@ -16,7 +16,7 @@ To use splinter you need to create a Browser instance:
 
 ::
 
-    from splinter import Browser
+    from cksplinter import Browser
     browser = Browser()
 
 Or, you can use it by a ``context manager``, through the ``with`` statement:
@@ -25,7 +25,7 @@ Or, you can use it by a ``context manager``, through the ``with`` statement:
 
 ::
 
-    from splinter import Browser
+    from cksplinter import Browser
     with Browser() as b:
         # stuff using the browser
 

@@ -53,7 +53,7 @@ the ``Browser`` instance:
 
 .. code-block:: python
 
-    from splinter import Browser
+    from cksplinter import Browser
     browser = Browser('firefox')
 
 **Note:** if you don't provide any driver to ``Browser`` function, ``firefox`` will be used.
@@ -68,7 +68,7 @@ when creating a new Browser instance.
 
 .. code-block:: python
 
-    from splinter import Browser
+    from cksplinter import Browser
     browser = Browser('firefox', headless=True)
 
 Incognito mode
@@ -79,7 +79,7 @@ when creating a Browser instance.
 
 .. code-block:: python
 
-    from splinter import Browser
+    from cksplinter import Browser
     browser = Browser('firefox', incognito=True)
 
 Specify Profile
@@ -90,7 +90,7 @@ using the ``profile`` keyword (passing the name of the profile as a ``str`` inst
 
 .. code-block:: python
 
-    from splinter import Browser
+    from cksplinter import Browser
     browser = Browser('firefox', profile='my_profile')
 
 If you don't specify a profile, a new temporary profile will be created (and deleted when you ``close`` the browser).
@@ -104,7 +104,7 @@ the extension, using the extensions keyword (passing the extensions as a ``list`
 
 .. code-block:: python
 
-    from splinter import Browser
+    from cksplinter import Browser
     browser = Browser('firefox', extensions=['extension1.xpi', 'extension2.xpi'])
 
 After the browser is closed, extensions will be deleted from the profile, even if the profile is not a temporary one.
@@ -114,7 +114,7 @@ Selenium Capabilities
 
 .. code-block:: python
 
-    from splinter import Browser
+    from cksplinter import Browser
     browser = Browser('firefox', capabilities={'acceptSslCerts': True})
 
 You can pass any selenium `read-write DesiredCapabilities parameters <https://code.google.com/p/selenium/wiki/DesiredCapabilities#Read-write_capabilities>`_ for Firefox.

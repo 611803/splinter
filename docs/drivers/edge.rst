@@ -67,7 +67,7 @@ the ``Browser`` instance:
 
 .. code-block:: python
 
-    from splinter import Browser
+    from cksplinter import Browser
     browser = Browser('edge')
 
 Edge Options
@@ -81,7 +81,7 @@ It must be imported from the ``msedge-selenium-tools`` package.
 .. code-block:: python
 
     from msedge.selenium_tools import EdgeOptions
-    from splinter import Browser
+    from cksplinter import Browser
 
     mobile_emulation = {"deviceName": "Google Nexus 5"}
     edge_options = EdgeOptions()
@@ -95,7 +95,7 @@ when creating a new Browser instance.
 
 .. code-block:: python
 
-    from splinter import Browser
+    from cksplinter import Browser
     browser = Browser('edge', headless=True)
 
 Incognito mode
@@ -106,7 +106,7 @@ when creating a Browser instance.
 
 .. code-block:: python
 
-    from splinter import Browser
+    from cksplinter import Browser
     browser = Browser('edge', incognito=True)
 
 Emulation mode
@@ -118,7 +118,7 @@ it is then possible to leverage the experimental emulation mode.
 .. code-block:: python
 
     from msedge.selenium_tools import EdgeOptions
-    from splinter import Browser
+    from cksplinter import Browser
 
     mobile_emulation = {"deviceName": "Google Nexus 5"}
     edge_options = EdgeOptions()
@@ -137,7 +137,7 @@ the value set to the path to the executable file.
 
 .. code-block:: python
 
-    from splinter import Browser
+    from cksplinter import Browser
     executable_path = {'executable_path':'</path/to/edge>'}
 
     browser = Browser('edge', **executable_path)
@@ -155,7 +155,7 @@ This requires the correct version of Edge and Edge Driver to be installed.
 
 .. code-block:: python
 
-    from splinter import Browser
+    from cksplinter import Browser
     browser = Browser('edge', chromium=False)
 
 API docs

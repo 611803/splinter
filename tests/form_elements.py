@@ -10,7 +10,7 @@ import unittest
 
 import pytest
 
-from splinter.exceptions import ElementDoesNotExist
+from cksplinter.exceptions import ElementDoesNotExist
 
 
 def skip_if_zope(f):

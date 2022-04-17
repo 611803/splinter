@@ -26,7 +26,7 @@ First of all, import ``Browser`` class and instantiate it.
 
 ::
 
-    from splinter import Browser
+    from cksplinter import Browser
     browser = Browser()
 
 **Note:** if you don't provide any driver argument to the ``Browser`` function, ``firefox`` will be used (`Browser function documentation <https://splinter.readthedocs.io/en/latest/api/driver-and-element-api.html>`_).
@@ -125,7 +125,7 @@ Finally, the source code will be:
 
 ::
 
-    from splinter import Browser
+    from cksplinter import Browser
 
     browser = Browser() # defaults to firefox
     browser.visit('http://google.com')

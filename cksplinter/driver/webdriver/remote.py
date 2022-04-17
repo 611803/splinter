@@ -8,8 +8,12 @@ from selenium.webdriver import Remote
 from selenium.webdriver.remote import remote_connection
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 
-from splinter.driver.webdriver import BaseWebDriver
-from splinter.driver.webdriver.remote_connection import patch_request
+from cksplinter.driver.webdriver import (
+    BaseWebDriver,
+    WebDriverElement,
+)
+from cksplinter.driver.webdriver.cookie_manager import CookieManager
+from cksplinter.driver.webdriver.remote_connection import patch_request
 
 # MonkeyPatch RemoteConnection
 remote_connection.RemoteConnection._request = patch_request

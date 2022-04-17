@@ -8,7 +8,7 @@ import os
 import time
 import unittest
 
-from splinter import Browser
+from cksplinter import Browser
 from .base import BaseBrowserTests
 from .fake_webapp import app, EXAMPLE_APP
 

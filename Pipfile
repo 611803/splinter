@@ -1,0 +1,15 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+setuptools = "*"
+wheel = "*"
+ck-splinter = {path = "./dist/ck_splinter-0.17.1-py3-none-any.whl"}
+twine = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"

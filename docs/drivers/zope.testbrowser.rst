@@ -36,7 +36,7 @@ the ``Browser`` instance:
 
 .. code-block:: python
 
-    from splinter import Browser
+    from cksplinter import Browser
     browser = Browser('zope.testbrowser')
 
 By default ``zope.testbrowser`` respects any robots.txt preventing access to a lot of sites. If you want to circumvent

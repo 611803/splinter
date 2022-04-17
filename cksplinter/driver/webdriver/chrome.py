@@ -1,23 +1,18 @@
 # -*- coding: utf-8 -*-
 
-# Copyright 2021 splinter authors. All rights reserved.
+# Copyright 2012 splinter authors. All rights reserved.
 # Use of this source code is governed by a BSD-style
 # license that can be found in the LICENSE file.
 
-# Selenium 3 compatibility
-try:
-    from msedge.selenium_tools import Edge
-    from msedge.selenium_tools import EdgeOptions as Options
-except ImportError:
-    from selenium.webdriver import Edge
-    from selenium.webdriver.edge.options import Options
-
-from splinter.driver.webdriver import BaseWebDriver
+from selenium.webdriver import Chrome
+from selenium.webdriver.chrome.options import Options
+from cksplinter.driver.webdriver import BaseWebDriver, WebDriverElement
+from cksplinter.driver.webdriver.cookie_manager import CookieManager
 
 
 class WebDriver(BaseWebDriver):
 
-    driver_name = "Edge"
+    driver_name = "Chrome"
 
     def __init__(
         self,
@@ -27,11 +22,10 @@ class WebDriver(BaseWebDriver):
         fullscreen=False,
         incognito=False,
         headless=False,
-        chromium=True,
         **kwargs
     ):
 
-        options = Options() or options
+        options = options or Options()
 
         if user_agent is not None:
             options.add_argument("--user-agent=" + user_agent)
@@ -46,8 +40,6 @@ class WebDriver(BaseWebDriver):
             options.add_argument("--headless")
             options.add_argument("--disable-gpu")
 
-        options.use_chromium = chromium
-
-        driver = Edge(options=options, **kwargs)
+        driver = Chrome(options=options, **kwargs)
 
         super(WebDriver, self).__init__(driver, wait_time)
